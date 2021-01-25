@@ -1,0 +1,12 @@
+﻿Sample,Target,Accession,URL,Output type
+GM12878,CTCF,ENCFF017XLW,https://www.encodeproject.org/files/ENCFF017XLW/@@download/ENCFF017XLW.bed.gz,conservative IDR thresholded peaks
+IMR-90,H3K4ac,ENCFF823NUO,https://www.encodeproject.org/files/ENCFF823NUO/@@download/ENCFF823NUO.bed.gz,replicated peaks
+GM12878,H3K4me3,ENCFF188SZS,https://www.encodeproject.org/files/ENCFF188SZS/@@download/ENCFF188SZS.bed.gz,replicated peaks
+IMR-90,H3K14ac,ENCFF106EAN,https://www.encodeproject.org/files/ENCFF106EAN/@@download/ENCFF106EAN.bed.gz,replicated peaks
+GM12878,H3K27ac,ENCFF367KIF,https://www.encodeproject.org/files/ENCFF367KIF/@@download/ENCFF367KIF.bed.gz,replicated peaks
+GM12878,H3K27me3,ENCFF153VOQ,https://www.encodeproject.org/files/ENCFF153VOQ/@@download/ENCFF153VOQ.bed.gz,replicated peaks
+GM12878,H3K36me3,ENCFF268HMO,https://www.encodeproject.org/files/ENCFF268HMO/@@download/ENCFF268HMO.bed.gz,replicated peaks
+GM12878,SMC3,ENCFF534PUK,https://www.encodeproject.org/files/ENCFF534PUK/@@download/ENCFF534PUK.bed.gz,bed
+MCF-7,Klf4,ENCFF287QDZ,https://www.encodeproject.org/files/ENCFF287QDZ/@@download/ENCFF287QDZ.bed.gz,conservative IDR thresholded peaks
+GM23338,Nanog,ENCFF897LBK,https://www.encodeproject.org/files/ENCFF897LBK/@@download/ENCFF897LBK.bed.gz,conservative IDR thresholded peaks
+GM12878,POLR2A,ENCFF794VYB,https://www.encodeproject.org/files/ENCFF794VYB/@@download/ENCFF794VYB.bed.gz,conservative IDR thresholded peaks

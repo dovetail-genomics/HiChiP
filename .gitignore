@@ -1,0 +1,5 @@
+#ignore DS_Store files and virtual env
+.DS_Store
+hichipenv/
+docs/build/
+docs/source/_templates/
