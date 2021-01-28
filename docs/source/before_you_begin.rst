@@ -12,6 +12,12 @@ Clone this repository:
 
    git clone https://github.com/dovetail-genomics/HiChiP.git
 
+And make the ``enrichment_stats.sh`` script executable:
+
+.. code-block:: console
+
+   chmod +x ./HiChiP/enrichment_stats.sh
+
 
 Dependencies
 -------------
@@ -26,10 +32,9 @@ Make sure that the following dependencies are installed:
 - `pandas <https://pandas.pydata.org/pandas-docs/stable/dsintro.html>`_
 - `bwa <https://github.com/lh3/bwa>`_
 - `pairtools <https://github.com/open2c/pairtools>`_
-- `preseq <http://smithlabresearch.org/software/preseq/>`_
 - `samtools <https://github.com/samtools/samtools>`_
 
-If you are facing any issues with the installation of any of the dependencies, please contact the supporter of the package.
+If you are facing any issues with the installation of any of the dependencies, please contact the supporter of the relevant package.
 
 python3 and pip3 are required, if you don't already have them installed, you will need sudo privileges.
 
@@ -77,11 +82,24 @@ For this tutorial you will need:
 
 * **fastq files** R1 and R2, either fastq or fastq.gz are acceptable
 * **reference in a fasta file format**, e.g. hg38
+* **peak calls from ChiP-seq experimen** (e.g. your own experiment or ENCODE gold standard in bed or narroow peak format, as explained :ref:`here<CENRICH>`), more details and links to ENCODE files can be found :ref:`here<DATASETS>`.
 
-If you don't already have your own input files or want to run a test on a small data set, you can download sample fastq files from the :ref:`HiChiP Data Sets section<DATASETS>`. The 2M data set is suitable for a quick testing of the instruction in this tutorial. 
+If you don't already have your own input files or want to run a test on a small data set, you can download sample fastq files from the :ref:`HiChiP Data Sets section<DATASETS>`. The 2M data set is suitable for a quick testing of the instructions in this tutorial. 
+
+The following files are suitable for testing, you can download them as follows:
 
 .. code-block:: console
 
    wget https://s3.amazonaws.com/dovetail.pub/HiChIP/fastqs/HiChiP_CTCF_2M_R1.fastq.gz
    wget https://s3.amazonaws.com/dovetail.pub/HiChIP/fastqs/HiChiP_CTCF_2M_R2.fastq.gz
+   wget https://www.encodeproject.org/files/ENCFF017XLW/@@download/ENCFF017XLW.bed.gz
+
+For zipped bed files, unzip them after download is completed (no need to unzip fastq.gz files)
+
+**Example:**
+
+.. code-block:: console
+
+   gunzip ENCFF017XLW.bed.gz
+
 

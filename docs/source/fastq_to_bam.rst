@@ -51,7 +51,6 @@ Now that you have a genome file, index file and a reference fasta file you are a
    :widths: 25 75
    :class: tight-table
 
-
 Bwa mem will output a sam file that you can either pipe or save to a path using -o option, as in the example below:
 
 **Command:**
@@ -90,7 +89,6 @@ We use the ``parse`` module of the ``pairtools`` pipeline to find ligation junct
    :header-rows: 1
    :widths: 20 20 60
    :class: tight-table
-
 
 ``pairtools parse`` command example for finding ligation events:
 
@@ -217,6 +215,7 @@ For downstream steps, the bam file should be sorted, using the command `samtools
    :widths: 25 75
    :class: tight-table
  
+.. _FINALBAM:
 
 **Command:**
 
