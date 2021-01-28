@@ -56,9 +56,9 @@ ChiP enrichment
 Calculating enrichment stats
 ++++++++++++++++++++++++++++
 
-Another key step in evaluating the quality of the HiChiP library is assesing the enrichment of HiChiP reads at protein binding sites, when protein binding sites correspond to a list of Chip-seq peaks. 
+Another key step in evaluating the quality of the HiChiP library is assesing the enrichment of HiChiP reads at protein binding sites, when protein binding sites correspond to a list of ChiP-Seq peaks. 
 
-Our QC pipeline support as an input both peaks in a simple ``bed`` file format (containing three colums: chr, star, end) or `ENCODE narrow peak format <https://genome.ucsc.edu/FAQ/FAQformat.html#format12>`_. For your convenience we include here :ref:`links<DATASETS>` to some key examples of peak files from ENCODE ChiP-Seq experiments. All are of proteins for which Dovetail™ HiChIP MNase Kit has `validated antibodies <https://dovetailgenomics.com/hichip-validated-antibodies/>`_.
+Our QC pipeline supports as an input both peaks in a simple ``bed`` file format (containing three colums: chr, star, end) or `ENCODE narrow peak format <https://genome.ucsc.edu/FAQ/FAQformat.html#format12>`_. For your convenience we include here :ref:`links<DATASETS>` to some key examples of peak files from ENCODE ChiP-Seq experiments. All are of proteins for which Dovetail™ HiChIP MNase Kit has `validated antibodies <https://dovetailgenomics.com/hichip-validated-antibodies/>`_.
 
 You can obtain gold-standards Chip-Seq peaks from databases, such as ENCODE, or generate your own list of peaks based on ChiP-Seq experiments, e.g. using `MACS2 <https://hbctraining.github.io/Intro-to-ChIPseq/lessons/05_peak_calling_macs.html>`_. 
 
@@ -131,16 +131,16 @@ In this example an output file `CTCF_hichip_qc_metrics.txt` will be created  wit
 
 The following image illustrates how enrichment around ChiP-Seq peaks is calculated:
 
-.. image:: /images/chip_seq1.png
+.. image:: /images/chipseq1.png
    :width: 500pt
 
 
 Plotting global enrichment around ChiP peaks
 ++++++++++++++++++++++++++++++++++++++++++++
 
-The ``plot_chip_enrichment.py`` and ``plot_chip_enrichment_bed.py`` scripts provide global evaluation of enrichment around known ChiP peaks. The script identifies the regions of ChiP peaks, sets a window of 1kb upstream and downstream of the peak's center, and based on the bam file of the valid pairs, calculate the aggregated read coverage within this window and plots the global fold coverage change based on the observed coverage divided by the mean coverage, as :ref:`illustrated<CHIPIMAGE>`. 
+The ``plot_chip_enrichment.py`` and ``plot_chip_enrichment_bed.py`` scripts provide global evaluation of enrichment around known ChiP peaks. The script identifies the regions of ChiP peaks, sets a window of 1kb upstream and downstream of the peak's center, and based on the :ref:`bam file<FINALBAM>` of the valid pairs, calculates the aggregated read coverage within this window and plots the global fold coverage change based on the observed coverage divided by the mean coverage, as :ref:`illustrated<CHIPIMAGE>`. 
 
-``plot_chip_enrichment.py`` is intendent to be used when a ``narrowPeak`` file is available. ``plot_chip_enrichment_bed.py`` functions very similar but accept a simple ``bed`` file with peaks intervals as an input. Other than that, the two scripts accept the same parameters:
+``plot_chip_enrichment.py`` is intendent to be used when a ``narrowPeak`` file is available and ``plot_chip_enrichment_bed.py`` accept a simple ``bed`` file with peaks intervals as an input. Other than that, the two scripts accept the same parameters:
 
 +---------+----------------------------------------------------------------------------------------+
 |Parameter|Function                                                                                |
@@ -185,7 +185,7 @@ Output plot:
 
 .. admonition:: Important!
 
-   - ``plot_chip_enrichment.py`` will accept only ``narrowPeak`` format which has to include 10 columns (not more), with the following specifications:
+   - ``plot_chip_enrichment.py`` will accept only ``narrowPeak`` format which has to include 10 columns, with the following specifications:
      - chromosome, start, end, in the three first columns 
      - Peak Signal value at column #7
      - Peak offset value at column #10 (when offset is the distance between the start position and the center of the peaks)
@@ -202,8 +202,8 @@ Output plot:
 
 There are two minor differences between the two scripts: 
 
-- ``plot_chip_enrichment.py`` calculate the center of the peak according to ``start + offset`` 
-  ``plot_chip_enrichment_bed.py`` choose the center of the peak as the middle point between ``start`` and ``end``
+- ``plot_chip_enrichment.py`` calculates the center of the peak according to ``start + offset`` 
+  ``plot_chip_enrichment_bed.py`` chooses the center of the peak as the middle point between ``start`` and ``end``
   Both will calculate the aggregated enrichment -1kb and +1kb of the center of the peak (no matter the legnth of the peak)
 
 - All intervals in the bed files are used for the meta-analysis when ``plot_chip_enrichment_bed.py`` is used
@@ -211,5 +211,5 @@ There are two minor differences between the two scripts:
  
 .. _CHIPIMAGE:
 
-.. image:: /images/chip_seq2.png
+.. image:: /images/chipseq2.png
    :width: 500pt
