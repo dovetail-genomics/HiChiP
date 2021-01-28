@@ -251,4 +251,4 @@ Index the bam file:
 The ``mapped.PT.bam`` is the final bam file that will be used downstream steps.
 
 
-The above steps resulted in multiple intermediate files, to simplify the process and avoid intermediate files, you can pipe the steps as in the example above (fastq to final valid pairs bam file - for the impatient)
+The above steps resulted in multiple intermediate files, to simplify the process and avoid intermediate files, you can pipe the steps as in the example above (:ref:`fastq to final valid pairs bam file - for the impatient<Impatient>`)
