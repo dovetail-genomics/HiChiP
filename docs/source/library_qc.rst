@@ -112,7 +112,7 @@ To calculate stats of reads enrichment around ChIP peaks, we provide the ``enric
 
    .. code-block:: console
 
-      gunzip peak.bed
+      gunzip peak.bed.gz
 
 In this example an output file `CTCF_hichip_qc_metrics.txt` will be created  with the below information:
 
@@ -197,7 +197,7 @@ Output plot:
 
    - If your peak file does not follow the above structure you can modify it into a simple bed file by extracting only the three first columns into a new file that can be used with the plot_chip_enrichment_bed.py script. 
 
-   - ``plot_chip_enrichment_bed.py`` will accept only bed files with 3 columns (not more). If your bed file includes more than three columns, extract the three first columns into a new file
+   - ``plot_chip_enrichment_bed.py`` will accept only bed files with 3 columns. If your bed file includes more than three columns, extract the three first columns into a new file
 
    - Example, how to extract only the first three columns:
 
@@ -208,7 +208,7 @@ Output plot:
 There are two minor differences between the two scripts: 
 
 - ``plot_chip_enrichment.py`` calculates the center of the peak according to ``start + offset`` 
-  ``plot_chip_enrichment_bed.py`` chooses the center of the peak as the middle point between ``start`` and ``end``
+  ``plot_chip_enrichment_bed.py`` chooses the center of the peak as the middle point between ``start`` and ``end``. 
   Both will calculate the aggregated enrichment -1kb and +1kb of the center of the peak (no matter the legnth of the peak)
 
 - All intervals in the bed files are used for the meta-analysis when ``plot_chip_enrichment_bed.py`` is used
