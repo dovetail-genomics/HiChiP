@@ -179,7 +179,7 @@ or
 
 or 
 
-..code-block:: console
+.. code-block:: console
 
   python3 ./HiChiP/plot_chip_enrichment_bed.py -bam mapped.PT.bam -peaks peaks.bed -output enrichment.png
 
