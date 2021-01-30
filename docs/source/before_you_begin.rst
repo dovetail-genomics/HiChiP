@@ -72,7 +72,7 @@ And then run the installation script:
 
 .. admonition:: Remember!
 
-   Once the installetion is completed, sign off and then sign back to your instance to refresh the database of applications.
+   Once the installation is completed, sign off and then sign back to your instance to refresh the database of applications.
 
 
 Input files
@@ -82,7 +82,7 @@ For this tutorial you will need:
 
 * **fastq files** R1 and R2, either fastq or fastq.gz are acceptable
 * **reference in a fasta file format**, e.g. hg38
-* **peak calls from ChiP-seq experimen** (e.g. your own experiment or ENCODE gold standard in bed or narroow peak format, as explained :ref:`here<CENRICH>`), more details and links to ENCODE files can be found :ref:`here<DATASETS>`.
+* **peak calls from ChiP-seq experiment** (e.g. your own experiment or ENCODE gold standard in bed or narrowpeak format, as explained :ref:`here<CENRICH>`), more details and links to ENCODE files can be found :ref:`here<DATASETS>`.
 
 If you don't already have your own input files or want to run a test on a small data set, you can download sample fastq files from the :ref:`HiChiP Data Sets section<DATASETS>`. The 2M data set is suitable for a quick testing of the instructions in this tutorial. 
 

@@ -54,6 +54,8 @@ Overview
    
    library_qc
    
+   contact_map
+   
    data_sets
 
    support

@@ -172,6 +172,7 @@ Removig PCR duplicates
 
    pairtools dedup --nproc-in 8 --nproc-out 8 --mark-dups --output-stats stats.txt --output dedup.pairsam sorted.pairsam
 
+.. _GPB:
 
 Generate .pairs and bam files
 +++++++++++++++++++++++++++++
@@ -201,6 +202,7 @@ The ``pairtools split`` command is used to split the final ``.pairsam`` into two
 
    pairtools split --nproc-in 8 --nproc-out 8 --output-pairs mapped.pairs --output-sam unsorted.bam dedup.pairsam
 
+The ``.pairs`` file can be used for generating :ref:`contact matrix <GCM>`
 
 Generating the final bam file
 +++++++++++++++++++++++++++++

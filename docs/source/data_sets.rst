@@ -1,7 +1,7 @@
 .. _DATASETS:
 
-HiChiP-C Data Sets
-=================
+HiChiP Data Sets
+================
 
 
 To download one of the data sets, simply use the wget command:
@@ -10,6 +10,8 @@ To download one of the data sets, simply use the wget command:
 
    wget https://s3.amazonaws.com/dovetail.pub/HiChIP/fastqs/HiChiP_CTCF_2M_R1.fastq.gz
    wget https://s3.amazonaws.com/dovetail.pub/HiChIP/fastqs/HiChiP_CTCF_2M_R2.fastq.gz
+ 
+For testing purposes, we recommend using the 2M reads data sets, for any other purpose we recommend using the 800M reads data set.
  
 Sequenced (human) libraries:
 ----------------------------
