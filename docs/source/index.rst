@@ -55,6 +55,12 @@ Overview
    library_qc
    
    contact_map
+
+   loops
+
+   plot_arc
+
+   1D_peak
    
    data_sets
 

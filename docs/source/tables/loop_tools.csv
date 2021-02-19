@@ -1,0 +1,5 @@
+﻿Tool,Repo,Input format,Resolution Option,Considers type of interaction
+FitHiChIP,https://ay-lab.github.io/FitHiChIP/,HiC-Pro ValidPairs,Yes,Yes
+Cloops,https://github.com/YaqiangCao/cLoops,Bedpe,No,No
+HiChIPPER,https://github.com/aryeelab/hichipper,HiC-Pro ValidPairs,Yes,No
+HiCCUPs,https://github.com/aidenlab/juicer/wiki/HiCCUPS,.hic,Yes,No
