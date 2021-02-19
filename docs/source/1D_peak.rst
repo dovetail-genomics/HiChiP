@@ -44,7 +44,7 @@ Workflow
    samtools –view –h –F 0x900 mapped.bam | bedtools bamtobed -i stdin > prefix.primary.aln.bed
 
 
-   Here we’re using samtools ``-view`` funtcion to retain the header (-h) and filter and keep (-F) the primary alignment (flag ID – 0X900) of the input bam file. Then the filtered alignments are being pipped into bedtools to convert the alignment (bam format) to bed format using the input flag for a UNIX piped input (stdin). Resulting in a final bed file. 
+Here we’re using samtools ``-view`` funtcion to retain the header (-h) and filter and keep (-F) the primary alignment (flag ID – 0X900) of the input bam file. Then the filtered alignments are being pipped into bedtools to convert the alignment (bam format) to bed format using the input flag for a UNIX piped input (stdin). Resulting in a final bed file. 
 
 
 2.	Run MACS2.
