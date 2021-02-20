@@ -21,6 +21,10 @@ Input files
 
 - :ref:`.bam <FINALBAM>` file generated at the :ref:`from fastq to final valid pairs bam file <FTB>` step.
 
+.. admonition:: Testing!
+
+   If you are looking for a dataset to practice this walkthrough, I reccomend the GM12878 CTCF (deep sequencing) from our publicaly available :ref:`datasets<DATASETS>`
+   
 Additional tools needed
 -----------------------
 

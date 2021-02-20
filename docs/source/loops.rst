@@ -74,6 +74,10 @@ This workflow assumes you have completed the :ref:`Step-by-step guide to Process
 - :ref:`Filtered Pairs file <GPB>` - output from :ref:`From fastq to final valid pairs <FTB>` workflow.
 - Bed file of ChIP-seq anchors for your protein of interest, e.g. as you used in the :ref:`QC step <LQ>`. We included in the :ref:`datasets section <DATASETS>` links to some useful ChIP-seq bed files from the Encode project. 
 
+.. admonition:: Testing!
+
+   If you are looking for a dataset to practice this walkthrough, I reccomend the GM12878 CTCF (deep sequencing) from our publicaly available :ref:`datasets<DATASETS>`
+   
 Tools
 -----
 
@@ -204,6 +208,11 @@ Workflow
 
 .. image:: /images/loops_summary.png
 
+.. _FITOUT:
+
+Output
+------
+FitHiChIP merged interactions output
 
 What if?
 --------
