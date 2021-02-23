@@ -30,6 +30,7 @@ Make sure that the following dependencies are installed:
 - `deeptools <https://deeptools.readthedocs.io/en/develop/>`_
 - `matplotlib <https://matplotlib.org/>`_
 - `pandas <https://pandas.pydata.org/pandas-docs/stable/dsintro.html>`_
+- `numpy <https://numpy.org>`_
 - `bwa <https://github.com/lh3/bwa>`_
 - `pairtools <https://github.com/open2c/pairtools>`_
 - `samtools <https://github.com/samtools/samtools>`_
