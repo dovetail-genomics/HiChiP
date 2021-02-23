@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-while getopts r:b:p:t:x: flag
+while getopts g:b:p:t:x: flag
 do
         case "${flag}" in
                 g) ref=${OPTARG};;

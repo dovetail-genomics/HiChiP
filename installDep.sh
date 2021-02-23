@@ -27,6 +27,8 @@ sudo apt-get install -y zlib1g-dev libcurl4
 
 pip install \
     pysam \
+    argparse \
+    pandas \
     tabulate \
     numpy \
     scipy \
