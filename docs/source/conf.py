@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = u'HiChiP'
+project = u'HiChIP'
 copyright = u'2021, Dovetail'
 author = u'Dovetail'
 
