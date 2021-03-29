@@ -3,7 +3,7 @@
 Before you begin
 ================
 
-Have a copy of the HiChiP scripts on your machine:
+Have a copy of the HiChIP scripts on your machine:
 ----------------------------------------------------
 
 Clone this repository:
@@ -85,7 +85,7 @@ For this tutorial you will need:
 * **reference in a fasta file format**, e.g. hg38
 * **peak calls from ChiP-seq experiment** (e.g. your own experiment or ENCODE gold standard in bed or narrowpeak format, as explained :ref:`here<CENRICH>`), more details and links to ENCODE files can be found :ref:`here<DATASETS>`.
 
-If you don't already have your own input files or want to run a test on a small data set, you can download sample fastq files from the :ref:`HiChiP Data Sets section<DATASETS>`. The 2M data set is suitable for a quick testing of the instructions in this tutorial. 
+If you don't already have your own input files or want to run a test on a small data set, you can download sample fastq files from the :ref:`HiChIP Data Sets section<DATASETS>`. The 2M data set is suitable for a quick testing of the instructions in this tutorial. 
 
 The following files are suitable for testing, you can download them as follows:
 

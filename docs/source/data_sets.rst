@@ -1,6 +1,6 @@
 .. _DATASETS:
 
-HiChiP Data Sets
+HiChIP Data Sets
 ================
 
 

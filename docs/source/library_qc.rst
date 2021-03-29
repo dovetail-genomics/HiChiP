@@ -6,7 +6,7 @@ Library QC
 Proximity-ligation assessment
 -----------------------------
 
-At step :ref:`Removing PCR duplicates<DUPs>` you used the flag `--output-stats`, generating a stats file in addition to the pairsam output (e.g. --output-stats stats.txt). The stats file is an extensive output of pairs statistics as calculated by pairtools, including total reads, total mapped, total dups, total pairs for each pair of chromosomes etc'. Although you can use directly the pairtools stats file as is to get informed on the quality of the HiChiP library, we find it easier to focus on a few key metrics. We include in this repository the script ``get_qc.py`` that summarize the paired-tools stats file and present them in percentage values in addition to absolute values.
+At step :ref:`Removing PCR duplicates<DUPs>` you used the flag `--output-stats`, generating a stats file in addition to the pairsam output (e.g. --output-stats stats.txt). The stats file is an extensive output of pairs statistics as calculated by pairtools, including total reads, total mapped, total dups, total pairs for each pair of chromosomes etc'. Although you can use directly the pairtools stats file as is to get informed on the quality of the HiChIP library, we find it easier to focus on a few key metrics. We include in this repository the script ``get_qc.py`` that summarize the paired-tools stats file and present them in percentage values in addition to absolute values.
 
 The images below explains how the values on the QC report are calculated:
 
@@ -56,7 +56,7 @@ ChiP enrichment
 Calculating enrichment stats
 ++++++++++++++++++++++++++++
 
-Another key step in evaluating the quality of the HiChiP library is assessing the enrichment of HiChiP reads at protein binding sites, when protein binding sites correspond to a list of ChiP-Seq peaks. 
+Another key step in evaluating the quality of the HiChiP library is assessing the enrichment of HiChIP reads at protein binding sites, when protein binding sites correspond to a list of ChiP-Seq peaks. 
 
 Our QC pipeline supports as an input both peaks in a simple ``bed`` file format (containing three columns: chr, star, end) or `ENCODE narrow peak format <https://genome.ucsc.edu/FAQ/FAQformat.html#format12>`_. For your convenience we include here :ref:`links<DATASETS>` to some key examples of peak files from ENCODE ChiP-Seq experiments. All are of proteins for which Dovetail™ HiChIP MNase Kit has `validated antibodies <https://dovetailgenomics.com/hichip-validated-antibodies/>`_.
 
