@@ -58,6 +58,8 @@ Overview
 
    loops
 
+   hichip_compare
+
    plot_arc
 
    1D_peak
