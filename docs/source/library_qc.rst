@@ -218,3 +218,57 @@ There are two minor differences between the two scripts:
 
 .. image:: /images/Step3.png
    :width: 500pt
+
+QC Assessment 
+-------------
+
+Pass/No Pass Metrics 
+++++++++++++++++++++
+
+Now that you have successfully completed the QC scripts, it is time to determine if the HiChIP library is of high quality. The QC metrics calculated above can be distilled down to three key quantitative metrics and one qualitative step to help you assess the quality of the library  before proceeding into deep sequencing. 
+
+.. image:: /images/Stat_location.png
+
+1. No-Dup Read Pairs – This value is reflective of the alignment rate and PCR duplication rate. It should be noted that this value scales inversely with sequencing depth.  
+2. No-dup cis read pairs ≥ 1kb – This value demonstrates that the proximity-ligation step was successful, and the majority of the data are useful in downstream analyses (e.g. loop calling). This value can be dependent on the protein of interest, for example CTCF has a very long-range contact profile while POL2A has a much more localized contact domain. The cut-off used here is applicable across different protein targets.  
+3. Total reads in 1000 bp around center of peaks – This value demonstrates that chromatin enrichment was successful. This metric is very similar to Fraction of Reads in Peaks (FRiP) score that is used to assess ChIP-seq data as defined by ENCODE. Our defined cut-off value is slightly more stringent than the ENCODE standard of 1%. It should be noted that this value is dependent on the peak set used, the value can be underestimated if you used a peak set that is not reflective of your experiment (e.g publicly available).  
+4. Visual assessment of HiChIP coverage in IGV – This step provides you a visual peace of mind that your IP-enrichment was successful. Alignments (.bam) should be converted into bigwig format with deepTools bamCoverage https://deeptools.readthedocs.io/en/develop/content/tools/bamCoverage.html).
+
+While the QC process can be boiled down to these key values, the remaining values of the QC process are used to diagnose and troubleshoot a library that falls into the “No Pass” category. Therefore, it is important to generate all the values in the QC process in case there is a need for troubleshooting.
+
+Pass/No Pass Values
++++++++++++++++++++
+
+The table below summarizes the minimum passing values for the metrics defined above. The cut-off values were determined for both shallow sequenced (20 million read pairs 2 x 150 bp) and deep sequenced data (100-200 Million read pairs 2 x 150 bp), as the percentage of mapped no-dup pairs changes with the sequencing depth.
+
++----------------------------------------------+----------------------+------------------------+
+|Metric                                        |Shallow Seq (20M)     |Deep Seq (100-200M)     |
++==============================================+======================+========================+
+|No-Dup Read Pairs                             |>75%                  |>50%                    |
++----------------------------------------------+----------------------+------------------------+
+|No-dup cis read pairs ≥ 1kb                   |>20%                  |>20%                    |
++----------------------------------------------+----------------------+------------------------+
+|Total reads in 1000 bp around center of peaks |>2%                   |>2%                     |
++----------------------------------------------+----------------------+------------------------+
+
+Visual Inspection Of The Alignments
++++++++++++++++++++++++++++++++++++
+
+Once you have compared your library QC values to the minimal quantitative requirements for a library to pass QC, you can move on visual assessment in IGV. Here we used the Integrated Genome Viewer (which can be downloaded an installed `here <https://software.broadinstitute.org/software/igv/download>`_). IGV is standard genome browser for visualizing NGS data in track format. Simply load your bigwigs into IGV then zoom in to a 1-2 Mbp window. In this step, we are looking to see if the data suggest that there has been enrichment. 
+
+- Good IP – exhibit distinct signals of sharply increased coverage from a low background indicating the location of the protein-DNA binding Site.  
+- Poor IP – exhibit no or weak coverage increases and are often accompanied by an elevated background signal.  
+
+Below is an annotated screenshot from IGV showing examples of both good and bad IP of shallow sequenced (20 M read pairs) libraries. The library exhibiting good IP characteristics (top track in black) shows clear, sharp coverage enrichment, and low background signal, where the library with poor IP, (bottom track in brown) has a high background signal and muted coverage enrichment.
+
+.. image:: /images/IGV_IP_QC.png
+
+Final Determination
++++++++++++++++++++
+
+If your libraries pass the minimum threshold for each of the 3 quantitative metrics, and the visual inspection: 
+
+- For shallow sequenced libraries - proceed to deep sequencing (~150 M read pairs per library) 
+- For deep sequencing – proceed with downstream analyses 
+
+If the libraries fail one or more of the 3 quantitative metrics or the visual inspection - please reach out to our support team at: support@dovetail-genomics.com
