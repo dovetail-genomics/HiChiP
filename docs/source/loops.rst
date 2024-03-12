@@ -235,4 +235,4 @@ What next?
 - Visualization
 
   - Continue with :ref:`plotting HiChIP interactions in R <PARC>`
-  - Import to the Wash-U epigenome browser (more information `in this link <https://ay-lab.github.io/FitHiChIP/usage/output.html#visualizing-significant-interactions-in-washu-epigenome-browser>`_)
+  - Import to the Wash-U epigenome browser (more information `in this link <https://ay-lab.github.io/FitHiChIP/html/usage/output.html#visualizing-significant-interactions-in-epigenome-browsers>`_)
